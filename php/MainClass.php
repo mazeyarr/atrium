@@ -10,9 +10,9 @@ require 'Database.php';
 class MainClass extends Database
 {
     public function header () {
-        return require ('path');
+        return require ('../template/header/header.php');
     }
     public function footer () {
-        return require ('path');
+        return require ('../template/footer/footer.php');
     }
 }
