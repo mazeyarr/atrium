@@ -1,10 +1,11 @@
 <?php
+require 'Constants.php';
 // Create and set the database variables
-$dbhost		= 'localhost';
-$dbname		= 'atrium';
-$dbusername	= 'root';
-$dbpassword	= '';
-$dbcharset	= 'lain1';
+$dbhost		= db_host;
+$dbname		= db_name;
+$dbusername	= db_username;
+$dbpassword	= db_password;
+$dbcharset	= db_charset;
 
 // Define the variables to use them within the Database class
 define("DB_HOST", "$dbhost");
