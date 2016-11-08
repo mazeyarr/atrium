@@ -2,6 +2,12 @@
 require 'php/bootstrap.php';
 $a = new MainClass();
 $a->header();
+
+$db = new Database();
+
+$sql = 'SELECT name, amount, date_begin, date_end FROM `supplies`';
+$db->query($sql);
+
 ?>
 <head>
 <body>
@@ -36,11 +42,16 @@ $a->header();
             </thead>
             <tbody>
               <tr>
-                <td>Product naam result</td>
-                <td>Voorraad result</td>
-                <td>aanbieder result</td>
-                <td>01-01-2016</td>
-                <td>02-01-2016</td>
+                <?php while($row = $db->Fetch())
+                  {
+                    echo "  <tr>";
+                    echo "  <td>".$row['name']."  </td> ";
+                    echo "  <td>".$row['amount']."  </td> ";
+                    echo "  <td> - </td> ";
+                    echo "  <td>".$row['date_begin']."  </td> ";
+                    echo "  <td>".$row['date_end']."  </td> ";
+                    echo "  </tr>";
+                  }?>
               </tr>
             </tbody>
           </table>
