@@ -3,6 +3,8 @@
 require 'php/bootstrap.php';
 $a = new MainClass();
 
+$a->header();
+
 ?>
 
 <div class="container">
@@ -50,3 +52,5 @@ $a = new MainClass();
     </div>
   </div>
 </div>
+
+<?php $a->footer(); ?>
