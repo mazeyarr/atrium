@@ -49,6 +49,10 @@ class Database
 		}
 		catch (PDOException $e)
 		{
+		    echo '<pre>';
+                var_dump($e);
+		    echo '</pre>';
+            die();
 			// If the connection fails, die and display an error
 			header('Location: error-database.html');
 		}
