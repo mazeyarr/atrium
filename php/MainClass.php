@@ -1,4 +1,5 @@
 <?php
+require 'Database.php';
 /**
  * Created by PhpStorm.
  * User: Mazeyar
@@ -6,10 +7,12 @@
  * Time: 10:06 AM
  */
 
-namespace Main;
-
-
 class MainClass extends Database
 {
-
+    public function header () {
+        return require ('path');
+    }
+    public function footer () {
+        return require ('path');
+    }
 }

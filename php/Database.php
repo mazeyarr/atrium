@@ -4,7 +4,7 @@ $dbhost		= 'localhost';
 $dbname		= 'atrium';
 $dbusername	= 'root';
 $dbpassword	= '';
-$dbcharset	= 'latin1';
+$dbcharset	= 'lain1';
 
 // Define the variables to use them within the Database class
 define("DB_HOST", "$dbhost");

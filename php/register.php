@@ -1,6 +1,6 @@
 <?php
 // Requires
-require("database.php");
+require("Database.php");
 
 // Create a new Database() instance
 $db = new Database();
