@@ -34,50 +34,21 @@ require 'php/bootstrap.php';
   </div>
 
   <div class="register-box-body">
-    <p class="login-box-msg">Gebruiker registreren</p>
+    <p class="login-box-msg">Inloggen</p>
 
     <form action="index.html" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="first_name" placeholder="Voornaam">
+        <input type="text" class="form-control" name="username" placeholder="Gebruikersnaam">
         <span class="fa fa-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="last_name" placeholder="Achternaam">
-        <span class="fa fa-users form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="email" class="form-control" name="email" placeholder="E-mail">
-        <span class="fa fa-envelope form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <select class="form-control" name="gender" id="sel1">
-         <option value="male">Man</option>
-         <option value="female">Vrouw</option>
-       </select>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="text" class="form-control" id="input_geboortedatum" name="birthday" placeholder="dd/mm/jjjj">
-        <span class="fa fa-calendar form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="skills" placeholder="Vaardigheden">
-        <span class="fa fa-wrench form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <div class="row">
-          <div class="col-sm-8">
-            <input type="text" class="form-control" name="street" placeholder="Straatnaam">
-          </div>
-          <div class="col-sm-4">
-            <input type="text" class="form-control" name="house_number" placeholder="#">
-          </div>
-          <span class="fa fa-home form-control-feedback"></span>
-        </div>
+        <input type="text" class="form-control" name="password" placeholder="Wachtwoord">
+        <span class="fa fa-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Registreren</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Inloggen</button>
         </div>
         <!-- /.col -->
       </div>
@@ -93,13 +64,6 @@ require 'php/bootstrap.php';
 <script src="js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="js/icheck.min.js"></script>
-<!-- Masked Input Plugin -->
-<script src="tools/jquerymask.js"></script>
 
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('#input_geboortedatum').mask('00/00/0000');
-  });
-</script>
 </body>
 </html>
