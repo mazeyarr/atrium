@@ -1,14 +1,13 @@
 <?php
-/*
+
 require 'php/bootstrap.php';
 $a = new MainClass();
-$a->header();
-*/
+
 ?>
 
 <div class="container">
   <div class="row">
-      <form class="form-horizontal" role="form">
+      <form class="form-horizontal" role="form" method="POST">
           <div class="form-group">
               <div class="col-sm-9">
                 <span class="glyphicons glyphicons-user"></span>
@@ -43,11 +42,11 @@ $a->header();
                 <input type="text" class="form-control" name="street" id="street"  placeholder="Straat"/>
                 <input type="text" class="form-control" name="house_number" id="house_number"  placeholder="Huisnummer"/>
               </div>
+              <div class="col-sm-9">
+                <input type="submit" class="btn btn-primary active" value="Registreren">
+              </div>
           </div>
         </form> <!-- /form -->
     </div>
   </div>
 </div>
-
-
-<?php //$a->footer(); ?>
