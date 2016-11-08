@@ -42,7 +42,7 @@ require 'php/bootstrap.php';
         <span class="fa fa-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="password" placeholder="Wachtwoord">
+        <input type="password" class="form-control" name="password" placeholder="Wachtwoord">
         <span class="fa fa-lock form-control-feedback"></span>
       </div>
       <div class="row">
