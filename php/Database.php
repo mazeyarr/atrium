@@ -6,6 +6,7 @@ $dbname		= db_name;
 $dbusername	= db_username;
 $dbpassword	= db_password;
 $dbcharset	= db_charset;
+$dbport		= db_port;
 
 // Define the variables to use them within the Database class
 define("DB_HOST", "$dbhost");
@@ -13,6 +14,7 @@ define("DB_USER", "$dbusername");
 define("DB_PASS", "$dbpassword");
 define("DB_NAME", "$dbname");
 define("DB_CHARSET", "$dbcharset");
+define("DB_PORT", "$dbport");
 
 class Database
 {
@@ -22,13 +24,14 @@ class Database
 	private $pass		= DB_PASS;
 	private $dbname 	= DB_NAME;
 	private $charset	= DB_CHARSET;
+	private $port		= DB_PORT;
 	private $dbh;
 
 	// __construct() runs every time a new instance of this class is created
 	public function __construct()
 	{
 		// Create and set the Data Source Name string
-		$dsn = "mysql:host=$this->host;dbname=$this->dbname;charset=$this->charset";
+		$dsn = "mysql:host=$this->host;port=$this->port;dbname=$this->dbname;charset=$this->charset";
 
 		// Configure the options
 		$options =
