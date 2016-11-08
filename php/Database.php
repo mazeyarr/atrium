@@ -1,20 +1,5 @@
 <?php
 require 'Constants.php';
-// Create and set the database variables
-$dbhost		= db_host;
-$dbname		= db_name;
-$dbusername	= db_username;
-$dbpassword	= db_password;
-$dbcharset	= db_charset;
-$dbport		= db_port;
-
-// Define the variables to use them within the Database class
-define("DB_HOST", "$dbhost");
-define("DB_USER", "$dbusername");
-define("DB_PASS", "$dbpassword");
-define("DB_NAME", "$dbname");
-define("DB_CHARSET", "$dbcharset");
-define("DB_PORT", "$dbport");
 
 class Database
 {

@@ -157,9 +157,22 @@
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
-                <li class="header">MAIN NAVIGATION</li>
+                <li class="header"></li>
+                <li><a href=""><i class="fa fa-home"></i><span>Home</span></a></li>
             </ul>
         </section>
         <!-- /.sidebar -->
     </aside>
     <div class="content-wrapper">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="info-box">
+                <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Nieuws</span>
+                    <span class="progress-description">asdasdsd</span>
+                </div>
+            </div>
+        </div>
+    </div>
