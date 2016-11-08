@@ -162,4 +162,3 @@
         </section>
         <!-- /.sidebar -->
     </aside>
-    <div class="content-wrapper">
