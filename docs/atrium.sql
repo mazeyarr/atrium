@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 08, 2016 at 10:12 AM
--- Server version: 5.7.11
--- PHP Version: 5.6.19
+-- Gegenereerd op: 08 nov 2016 om 12:10
+-- Serverversie: 5.7.11
+-- PHP-versie: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,16 +19,13 @@ SET time_zone = "+00:00";
 --
 -- Database: `atrium`
 --
-CREATE DATABASE IF NOT EXISTS `atrium` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci;
-USE `atrium`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `activities`
+-- Tabelstructuur voor tabel `activities`
 --
 
-DROP TABLE IF EXISTS `activities`;
 CREATE TABLE `activities` (
   `id` int(11) NOT NULL,
   `title` varchar(45) COLLATE latin1_general_ci NOT NULL,
@@ -42,10 +39,9 @@ CREATE TABLE `activities` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `iplogs`
+-- Tabelstructuur voor tabel `iplogs`
 --
 
-DROP TABLE IF EXISTS `iplogs`;
 CREATE TABLE `iplogs` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -56,10 +52,9 @@ CREATE TABLE `iplogs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `profiles`
+-- Tabelstructuur voor tabel `profiles`
 --
 
-DROP TABLE IF EXISTS `profiles`;
 CREATE TABLE `profiles` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -79,10 +74,9 @@ CREATE TABLE `profiles` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `services`
+-- Tabelstructuur voor tabel `services`
 --
 
-DROP TABLE IF EXISTS `services`;
 CREATE TABLE `services` (
   `id` int(11) NOT NULL,
   `name` varchar(45) COLLATE latin1_general_ci NOT NULL,
@@ -93,10 +87,9 @@ CREATE TABLE `services` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `supplies`
+-- Tabelstructuur voor tabel `supplies`
 --
 
-DROP TABLE IF EXISTS `supplies`;
 CREATE TABLE `supplies` (
   `id` int(11) NOT NULL,
   `name` varchar(50) COLLATE latin1_general_ci NOT NULL,
@@ -107,10 +100,9 @@ CREATE TABLE `supplies` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transactions`
+-- Tabelstructuur voor tabel `transactions`
 --
 
-DROP TABLE IF EXISTS `transactions`;
 CREATE TABLE `transactions` (
   `id` int(11) NOT NULL,
   `datetime` datetime NOT NULL,
@@ -124,12 +116,12 @@ CREATE TABLE `transactions` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Tabelstructuur voor tabel `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
+  `rank` tinyint(4) NOT NULL,
   `username` varchar(50) COLLATE latin1_general_ci NOT NULL,
   `password` char(255) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
   `salt` char(255) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL
@@ -138,10 +130,9 @@ CREATE TABLE `users` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users_in_activities`
+-- Tabelstructuur voor tabel `users_in_activities`
 --
 
-DROP TABLE IF EXISTS `users_in_activities`;
 CREATE TABLE `users_in_activities` (
   `user_id` int(11) NOT NULL,
   `activity_id` int(11) NOT NULL
@@ -150,10 +141,9 @@ CREATE TABLE `users_in_activities` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `valuta`
+-- Tabelstructuur voor tabel `valuta`
 --
 
-DROP TABLE IF EXISTS `valuta`;
 CREATE TABLE `valuta` (
   `id` int(11) NOT NULL,
   `balance` int(11) NOT NULL,
@@ -161,44 +151,44 @@ CREATE TABLE `valuta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Indexes for dumped tables
+-- Indexen voor geëxporteerde tabellen
 --
 
 --
--- Indexes for table `activities`
+-- Indexen voor tabel `activities`
 --
 ALTER TABLE `activities`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `iplogs`
+-- Indexen voor tabel `iplogs`
 --
 ALTER TABLE `iplogs`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `profiles`
+-- Indexen voor tabel `profiles`
 --
 ALTER TABLE `profiles`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `services`
+-- Indexen voor tabel `services`
 --
 ALTER TABLE `services`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `supplies`
+-- Indexen voor tabel `supplies`
 --
 ALTER TABLE `supplies`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `transactions`
+-- Indexen voor tabel `transactions`
 --
 ALTER TABLE `transactions`
   ADD PRIMARY KEY (`id`),
@@ -206,102 +196,102 @@ ALTER TABLE `transactions`
   ADD KEY `user_id_to` (`user_id_to`);
 
 --
--- Indexes for table `users`
+-- Indexen voor tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users_in_activities`
+-- Indexen voor tabel `users_in_activities`
 --
 ALTER TABLE `users_in_activities`
   ADD KEY `user_id` (`user_id`),
   ADD KEY `activity_id` (`activity_id`);
 
 --
--- Indexes for table `valuta`
+-- Indexen voor tabel `valuta`
 --
 ALTER TABLE `valuta`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
 --
--- AUTO_INCREMENT for table `iplogs`
+-- AUTO_INCREMENT voor een tabel `iplogs`
 --
 ALTER TABLE `iplogs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `profiles`
+-- AUTO_INCREMENT voor een tabel `profiles`
 --
 ALTER TABLE `profiles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `services`
+-- AUTO_INCREMENT voor een tabel `services`
 --
 ALTER TABLE `services`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `supplies`
+-- AUTO_INCREMENT voor een tabel `supplies`
 --
 ALTER TABLE `supplies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `transactions`
+-- AUTO_INCREMENT voor een tabel `transactions`
 --
 ALTER TABLE `transactions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `valuta`
+-- AUTO_INCREMENT voor een tabel `valuta`
 --
 ALTER TABLE `valuta`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- Constraints for dumped tables
+-- Beperkingen voor geëxporteerde tabellen
 --
 
 --
--- Constraints for table `activities`
+-- Beperkingen voor tabel `activities`
 --
 ALTER TABLE `activities`
   ADD CONSTRAINT `activities_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `iplogs`
+-- Beperkingen voor tabel `iplogs`
 --
 ALTER TABLE `iplogs`
   ADD CONSTRAINT `iplogs_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `profiles`
+-- Beperkingen voor tabel `profiles`
 --
 ALTER TABLE `profiles`
   ADD CONSTRAINT `profiles_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `transactions`
+-- Beperkingen voor tabel `transactions`
 --
 ALTER TABLE `transactions`
   ADD CONSTRAINT `transactions-from_users` FOREIGN KEY (`user_id_from`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `transactions-to_users` FOREIGN KEY (`user_id_to`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `users_in_activities`
+-- Beperkingen voor tabel `users_in_activities`
 --
 ALTER TABLE `users_in_activities`
   ADD CONSTRAINT `activityid` FOREIGN KEY (`activity_id`) REFERENCES `activities` (`id`),
   ADD CONSTRAINT `activityuser` FOREIGN KEY (`user_id`) REFERENCES `activities` (`user_id`);
 
 --
--- Constraints for table `valuta`
+-- Beperkingen voor tabel `valuta`
 --
 ALTER TABLE `valuta`
   ADD CONSTRAINT `valuta_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
