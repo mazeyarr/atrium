@@ -1,0 +1,30 @@
+body {
+	background-color: #d2d6de;
+}
+
+.row_package {
+	margin-top: 250px;x
+}
+
+.panel-heading {
+	text-align: center;
+}
+
+.panel-body {
+	height: 220px;
+}
+
+.image_coin {
+	height: 50%;
+	display: block;
+	margin: auto;
+}
+
+hr {
+	box-shadow: 1px 1px 0 #ccc;
+}
+
+button {
+	width: 100%;
+	margin-top: 9px;
+}

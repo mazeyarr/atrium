@@ -157,9 +157,30 @@
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
-                <li class="header">MAIN NAVIGATION</li>
+                <li class="header"></li>
+                <li><a href=""><i class="fa fa-home"></i><span>Home</span></a></li>
             </ul>
         </section>
         <!-- /.sidebar -->
     </aside>
     <div class="content-wrapper">
+
+    <div class="row">
+        <div class="menu-container">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Inbox</h3>
+
+                      <div class="box-tools pull-right">
+                        <div class="has-feedback">
+                          <input type="text" class="form-control input-sm" placeholder="Search Mail">
+                          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                        </div>
+                      </div>
+                      <!-- /.box-tools -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

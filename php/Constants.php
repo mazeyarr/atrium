@@ -1,7 +1,7 @@
 <?php
-define("db_host",		"localhost");
-define("db_name",		"atrium");
-define("db_username",	"root");
-define("db_password",	"");
-define("db_charset",	"latin1");
-define("db_port",		"3306");
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "");
+define("DB_NAME", "atrium");
+define("DB_CHARSET", "latin1");
+define("DB_PORT", "3306");
