@@ -25,6 +25,8 @@ require 'php/bootstrap.php';
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="css/_all-skins.min.css">
+    <!-- Sweetalert CSS-->
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -106,6 +108,13 @@ require 'php/bootstrap.php';
             <h1>
                 Diensten
             </h1>
+            <div class="row">
+                <div class="col-md-2">
+                    <button type="button" id="request" class="btn btn-block btn-primary">Verzoek maken</button>
+                </div>
+
+                <div class="col-md-10"></div>
+            </div>
         </section>
 
         <!-- Main content -->
@@ -361,6 +370,8 @@ require 'php/bootstrap.php';
 <script src="js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="js/demo.js"></script>
+<!-- Sweetalert js-->
+<script src="js/sweetalert2.min.js"></script>
 <!-- page script -->
 <script>
     $(function () {
@@ -373,6 +384,25 @@ require 'php/bootstrap.php';
             "info": true,
             "autoWidth": false
         });
+    });
+
+    $( "#request" ).click(function() {
+        swal({
+            title: 'Verzoek maken',
+            html:
+            '<div class="row"><div class="col-sm-12"><input class="form-control"></div></div>' +
+            '<div class="row"><div class="col-sm-12"><textarea class="form-control"></textarea></div></div>',
+            showCloseButton: true,
+            showCancelButton: true,
+            cancelButtonColor: '#d33',
+            confirmButtonText:
+                'Verzoek maken',
+        }).then(function(email) {
+            swal({
+                type: 'success',
+                title: 'Verzoek toegevoegd!',
+            })
+        })
     });
 </script>
 </body>
