@@ -62,8 +62,6 @@ require 'php/bootstrap.php';
 <script src="js/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="js/icheck.min.js"></script>
 
 </body>
 </html>
