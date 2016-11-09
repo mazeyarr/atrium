@@ -21,6 +21,8 @@ require 'php/bootstrap.php';
   <link rel="stylesheet" href="css/AdminLTE.min.css">
 	<!-- Store style -->
   <link rel="stylesheet" href="css/store.css">
+  <!-- Sweetalert CSS-->
+  <link rel="stylesheet" href="css/sweetalert2.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,6 +37,10 @@ require 'php/bootstrap.php';
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="row row_package">
+          <div class="register-logo">
+            <a href="index2.html"><strong>'t</strong> Atrium</a>
+            <p style="text-align: center; font-size: 27px;"><i>BrandCoins kopen</i></p>
+          </div>
 					<div class="col-sm-3">
 						<div class="panel panel-default">
 				      <div class="panel-heading">Pakket 1</div>
@@ -71,7 +77,7 @@ require 'php/bootstrap.php';
 				      <div class="panel-body">
 								<img src="img/coin4.png" class="image_coin"/>
 								<hr/>
-								<button type="button" class="btn btn-success">Koop 1000</button>
+								<button type="button" class="btn btn-success btn_purchase">Koop 1000</button>
 							</div>
 				    </div>
 					</div>
@@ -84,6 +90,27 @@ require 'php/bootstrap.php';
 <script src="js/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="js/bootstrap.min.js"></script>
+<!-- Sweetalert js-->
+<script src="js/sweetalert2.min.js"></script>
+
+<script>
+    $( ".btn_purchase" ).click(function() {
+      swal({
+        title: "Ajax request example",
+        text: "Submit to run ajax request",
+        type: "info",
+        showCancelButton: true,
+        closeOnConfirm: false,
+        showLoaderOnConfirm: true,
+      },
+      function(){
+        setTimeout(function(){
+          swal("Ajax request finished!");
+        }, 2000);
+      });
+    });
+</script>
+
 
 </body>
 </html>
