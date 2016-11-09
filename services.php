@@ -397,6 +397,11 @@ require 'php/bootstrap.php';
             cancelButtonColor: '#d33',
             confirmButtonText:
                 'Verzoek maken',
+        }).then(function(email) {
+            swal({
+                type: 'success',
+                title: 'Verzoek toegevoegd!',
+            })
         })
     });
 </script>
