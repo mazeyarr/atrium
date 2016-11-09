@@ -17,6 +17,7 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="css/_all-skins.min.css">
+    <link rel="stylesheet" href="css/menu-style.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -164,23 +165,3 @@
         <!-- /.sidebar -->
     </aside>
     <div class="content-wrapper">
-
-    <div class="row">
-        <div class="menu-container">
-            <div class="col-md-12">
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                      <h3 class="box-title">Inbox</h3>
-
-                      <div class="box-tools pull-right">
-                        <div class="has-feedback">
-                          <input type="text" class="form-control input-sm" placeholder="Search Mail">
-                          <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                        </div>
-                      </div>
-                      <!-- /.box-tools -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
