@@ -7,7 +7,7 @@ require 'Database.php';
  * Time: 10:06 AM
  */
 
-class MainClass extends Database
+class MainClass
 {
     private function validate($post){
         $errors = array();
