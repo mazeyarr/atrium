@@ -14,7 +14,7 @@ $a->header();
       <div class="col-xs-12">
          <div class="box">
             <div class="box-header">
-               <h3 class="box-title">Responsive Hover Table</h3>
+               <h3 class="box-title">Deelhoek</h3>
                <div class="box-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
                      <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
@@ -29,14 +29,14 @@ $a->header();
               <div class="span2">
                <table class="table table-hover">
                   <tr>
-                     <th>Product</th>
+                     <th>Voorwerp</th>
                      <th>Aanbieder</th>
                      <th>Voorraad</th>
                      <th width="100">Beschikbaar vanaf</th>
                   </tr>
                   <tr>
                      <td>Bladblazer</td>
-                     <td>Ans Achtertuin</td>
+                     <td>'t Atrium</td>
                      <td>1</td>
                      <td><button type="button" class="btn btn-block btn-success">Reseveer</button></td>
                   </tr>
@@ -66,13 +66,13 @@ $a->header();
                   </tr>
                   <tr>
                      <td>Schroevendraaier</td>
-                     <td>Fabiënne Faas</td>
+                     <td>'t Atrium</td>
                      <td>6</td>
                      <td><button type="button" class="btn btn-block btn-success">Reseveer</button></td>
                   </tr>
                   <tr>
                      <td>Veerklemmen</td>
-                     <td>Gerard Gallileo</td>
+                     <td>'t Atrium</td>
                      <td>0</td>
                      <td><button type="button" class="btn btn-block btn-warning disabled">Per 01-12-2016</button></td>
                   </tr>
