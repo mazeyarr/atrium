@@ -2,8 +2,17 @@ body {
 	background-color: #d2d6de;
 }
 
+hr {
+	box-shadow: 1px 1px 0 #ccc;
+}
+
+button {
+	width: 100%;
+	margin-top: 9px;
+}
+
 .row_package {
-	margin-top: 250px;x
+	margin-top: 160px;
 }
 
 .panel-heading {
@@ -18,13 +27,4 @@ body {
 	height: 50%;
 	display: block;
 	margin: auto;
-}
-
-hr {
-	box-shadow: 1px 1px 0 #ccc;
-}
-
-button {
-	width: 100%;
-	margin-top: 9px;
 }
