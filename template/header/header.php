@@ -32,7 +32,7 @@
         <nav class="navbar navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="../../index2.html" class="navbar-brand"><b>Admin</b>LTE</a>
+                    <a href="../../index2.html" class="navbar-brand"><b>'T </b>ATRIUM</a>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                         <i class="fa fa-bars"></i>
                     </button>
@@ -41,26 +41,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Link</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#">Dashboard</a></li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
-                        </div>
-                    </form>
                 </div>
                 <!-- /.navbar-collapse -->
                 <!-- Navbar Right Menu -->
@@ -69,10 +51,7 @@
                         <!-- Messages: style can be found in dropdown.less-->
                         <li class="dropdown messages-menu">
                             <!-- Menu toggle button -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="label label-success">4</span>
-                            </a>
+
                             <ul class="dropdown-menu">
                                 <li class="header">You have 4 messages</li>
                                 <li>
@@ -82,7 +61,7 @@
                                             <a href="#">
                                                 <div class="pull-left">
                                                     <!-- User Image -->
-                                                    <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                    <img src="img/portrait-1.jpg" class="img-circle" alt="User Image">
                                                 </div>
                                                 <!-- Message title and timestamp -->
                                                 <h4>
@@ -105,10 +84,7 @@
                         <!-- Notifications Menu -->
                         <li class="dropdown notifications-menu">
                             <!-- Menu toggle button -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-bell-o"></i>
-                                <span class="label label-warning">10</span>
-                            </a>
+
                             <ul class="dropdown-menu">
                                 <li class="header">You have 10 notifications</li>
                                 <li>
@@ -128,10 +104,7 @@
                         <!-- Tasks Menu -->
                         <li class="dropdown tasks-menu">
                             <!-- Menu Toggle Button -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-flag-o"></i>
-                                <span class="label label-danger">9</span>
-                            </a>
+
                             <ul class="dropdown-menu">
                                 <li class="header">You have 9 tasks</li>
                                 <li>
@@ -166,18 +139,18 @@
                             <!-- Menu Toggle Button -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!-- The user image in the navbar-->
-                                <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <img src="img/portrait-1.jpg" class="user-image" alt="User Image">
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                <span class="hidden-xs">Alexander Pierce</span>
+                                <span class="hidden-xs">Mazeyar Rezaei</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- The user image in the menu -->
                                 <li class="user-header">
-                                    <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <img src="img/portrait-1.jpg" class="img-circle" alt="User Image">
 
                                     <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
+                                        Mazeyar Rezaei - Web Developer
+                                        <small>Member since Nov. 2016</small>
                                     </p>
                                 </li>
                                 <!-- Menu Body -->
