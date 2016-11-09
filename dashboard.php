@@ -22,7 +22,7 @@ $a->header();
         </div>
       </div>
     </div>
-    <div class="col-md-4 col-sm-12 dash-menu-box">
+    <div class="col-md-4 col-sm-12 dash-menu-box dash-diensten">
       <div class="box box-primary">
         <div class="box-header with-header">
           <h3 class="box-title">Diensten</h3>
