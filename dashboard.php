@@ -42,7 +42,7 @@ $a->header();
         </div>
         <div class="box-body">
           Klik op de knop hieronder om naar de deelhoek te gaan.<br><br>
-          In de Deelhoek kunt u spullen lenen en/of uitlenen van zowel wijkbewoners als 't Atrium<br>
+          In de Deelhoek kunt u spullen lenen en/of uitlenen van zowel wijkbewoners als 't Atrium.<br>
           <i class="ion ion-hammer dash-menu-icon"></i>
           <a href="#" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar de Deelhoek</b></a>
         </div>
