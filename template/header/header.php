@@ -215,10 +215,3 @@
     </header>
     <!-- Full Width Column -->
     <div class="content-wrapper">
-    <div class="row">
-        <div class="menu-container">
-            <div class="col-md-12">
-
-            </div>
-        </div>
-    </div>
