@@ -216,5 +216,7 @@
 <script src="js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="js/demo.js"></script>
+<script src="js/sweetalert2.min.js"></script>
+
 </body>
 </html>

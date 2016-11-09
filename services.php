@@ -2,377 +2,102 @@
 
 require 'php/bootstrap.php';
 
+$page = new MainClass();
+$page->header();
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Data Tables</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.6 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- DataTables -->
-    <link rel="stylesheet" href="css/dataTables.bootstrap.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="css/_all-skins.min.css">
-    <!-- Sweetalert CSS-->
-    <link rel="stylesheet" href="css/sweetalert2.min.css">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Diensten
+    </h1>
+</section>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Verzoeken</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body table-responsive no-padding">
+                    <table class="table table-hover">
+                        <tbody id="services">
+                        <tr>
+                            <th>Titel</th>
+                            <th>Omschrijving</th>
+                            <th>Gebruiker</th>
+                            <th>Adres</th>
+                            <th>Datum</th>
+                            <th>Reageer</th>
 
-    <header class="main-header">
-        <!-- Logo -->
-        <a href="../../index2.html" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>A</b>LT</span>
-            <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Admin</b>LTE</span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top">
-            <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-
-            <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
-                    <!-- Messages: style can be found in dropdown.less-->
-
-                    <!-- User Account: style can be found in dropdown.less -->
-
-                    <!-- Control Sidebar Toggle Button -->
-
-                </ul>
+                        </tr>
+                        <tr id="jos">
+                            <td>Belastingaangifte</td>
+                            <td>Ik heb het de komende periode erg druk, dus zoek ik iemand om voor mij de belastingaangifte te doen.</td>
+                            <td id="name-jos">Jos van As</td>
+                            <td>Adres</td>
+                            <td><?php echo date('d-m-Y');?></td>
+                            <td><button type="button" class="btn btn-info react" data-id="jos">Reageer</button></td>
+                        </tr>
+                        <tr id="samantha">
+                            <td>Gaatje boren</td>
+                            <td>Het zou fijn zijn als iemand bij mij een gaatje in de muur kan komen boren, omdat ik het gereedschap daarvoor niet heb</td>
+                            <td id="name-samantha">Samantha van Gerwen</td>
+                            <td>Adres</td>
+                            <td><?php echo date('d-m-Y');?></td>
+                            <td><button type="button" class="btn btn-info react" data-id="samantha">Reageer</button></td>
+                        </tr>
+                        <tr id="sjonnie">
+                            <td>Koelkast kapot</td>
+                            <td>Mijn koelkast wordt niet meer koud, kan iemand die hier verstand van heeft even langs komen?</td>
+                            <td id="name-sjonnie">Sjonnie de Boer</td>
+                            <td>Adres</td>
+                            <td><?php echo date('d-m-Y');?></td>
+                            <td><button type="button" class="btn btn-info react" data-id="sjonnie">Reageer</button></td>
+                        </tr>
+                        <tr id="anita">
+                            <td>Autoreparatie</td>
+                            <td>Mijn auto start niet meer, kan iemand mij hierbij helpen?</td>
+                            <td id="name-anita">Anita de Boer</td>
+                            <td>Adres</td>
+                            <td><?php echo date('d-m-Y');?></td>
+                            <td><button type="button" class="btn btn-info react" data-id="anita">Reageer</button></td>
+                        </tr>
+                        <tr id="truusje">
+                            <td>Computerproblemen</td>
+                            <td>Mijn computer crasht elke keer nadat Windows is geladen</td>
+                            <td id="name-truusje">Truusje de Wit</td>
+                            <td>Adres</td>
+                            <td><?php echo date('d-m-Y');?></td>
+                            <td><button type="button" class="btn btn-info react" data-id="truusje">Reageer</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
             </div>
-        </nav>
-    </header>
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-            <!-- Sidebar user panel -->
-            <div class="user-panel">
-                <div class="pull-left image">
-                    <div style="margin-left: 0px; margin-top: 40px; margin-bottom: 40px"></div>
-                </div>
-                <div class="pull-left info">
-                    <p>Alexander Pierce</p>
-
-                </div>
-            </div>
-            <!-- search form -->
-            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Zoek...">
-                    <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-                </div>
-            </form>
-            <!-- /.search form -->
-            <!-- sidebar menu: : style can be found in sidebar.less -->
-            <ul class="sidebar-menu">
-                <li class="header">MAIN NAVIGATION</li>
-            </ul>
-        </section>
-        <!-- /.sidebar -->
-    </aside>
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                Diensten
-            </h1>
-            <div class="row">
-                <div class="col-md-2">
-                    <button type="button" id="request" class="btn btn-block btn-primary">Verzoek maken</button>
-                </div>
-
-                <div class="col-md-10"></div>
-            </div>
-        </section>
-
-        <!-- Main content -->
-        <section class="content">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="box">
-                        <div class="box-header">
-                            <h3 class="box-title">Verzochte diensten</h3>
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body">
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                <tr>
-                                    <th>Naam</th>
-                                    <th>Verzoek</th>
-                                    <th>Datum</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.box-body -->
-                    </div>
-                    <!-- /.box -->
-                </div>
-                <!-- /.col -->
-            </div>
-            <!-- /.row -->
-        </section>
-        <!-- /.content -->
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
     </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.3.7
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-md-10"></div>
+        <div class="col-md-2">
+            <button type="button" id="request" class="btn btn-block btn-success">Verzoek maken</button>
         </div>
-        <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-        reserved.
-    </footer>
+    </div>
+</section>
+<!-- /.content -->
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-            <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <!-- Home tab content -->
-            <div class="tab-pane" id="control-sidebar-home-tab">
-                <h3 class="control-sidebar-heading">Recent Activity</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+<?php
+$page->footer();
+?>
 
-                                <p>Will be 23 on April 24th</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-user bg-yellow"></i>
-
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-
-                                <p>New phone +1(800)555-1234</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
-                                <p>nora@example.com</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                                <p>Execution time 5 seconds</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.control-sidebar-menu -->
-
-                <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Custom Template Design
-                                <span class="label label-danger pull-right">70%</span>
-                            </h4>
-
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Update Resume
-                                <span class="label label-success pull-right">95%</span>
-                            </h4>
-
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Laravel Integration
-                                <span class="label label-warning pull-right">50%</span>
-                            </h4>
-
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Back End Framework
-                                <span class="label label-primary pull-right">68%</span>
-                            </h4>
-
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.control-sidebar-menu -->
-
-            </div>
-            <!-- /.tab-pane -->
-            <!-- Stats tab content -->
-            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-            <!-- /.tab-pane -->
-            <!-- Settings tab content -->
-            <div class="tab-pane" id="control-sidebar-settings-tab">
-                <form method="post">
-                    <h3 class="control-sidebar-heading">General Settings</h3>
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Report panel usage
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-
-                        <p>
-                            Some information about this general settings option
-                        </p>
-                    </div>
-                    <!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Allow mail redirect
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-
-                        <p>
-                            Other sets of options are available
-                        </p>
-                    </div>
-                    <!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Expose author name in posts
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-
-                        <p>
-                            Allow the user to show his name in blog posts
-                        </p>
-                    </div>
-                    <!-- /.form-group -->
-
-                    <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Show me as online
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                    </div>
-                    <!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Turn off notifications
-                            <input type="checkbox" class="pull-right">
-                        </label>
-                    </div>
-                    <!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Delete chat history
-                            <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-                        </label>
-                    </div>
-                    <!-- /.form-group -->
-                </form>
-            </div>
-            <!-- /.tab-pane -->
-        </div>
-    </aside>
-    <!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery 2.2.3 -->
-<script src="js/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="js/bootstrap.min.js"></script>
-<!-- DataTables -->
-<script src="js/jquery.dataTables.min.js"></script>
-<script src="js/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="js/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="js/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="js/demo.js"></script>
-<!-- Sweetalert js-->
-<script src="js/sweetalert2.min.js"></script>
-<!-- page script -->
 <script>
     $(function () {
         $("#example1").DataTable();
@@ -386,24 +111,47 @@ require 'php/bootstrap.php';
         });
     });
 
+    $(".react").click(function () {
+        var id = $(this).attr('data-id')
+        var name = $('#name-' + id).html()
+        swal({
+            title: 'Reageer op ' + name,
+            html: '<div class="row"><div class="col-sm-12"><textarea id="omschrijving" class="form-control"></textarea></div></div>',
+            showCloseButton: true,
+            showCancelButton: true,
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Verstuur reactie',
+        }).then(function () {
+            swal({
+                type: 'success',
+                title: 'Reactie verstuurd!',
+            })
+        })
+    })
     $( "#request" ).click(function() {
         swal({
             title: 'Verzoek maken',
             html:
-            '<div class="row"><div class="col-sm-12"><input class="form-control"></div></div>' +
-            '<div class="row"><div class="col-sm-12"><textarea class="form-control"></textarea></div></div>',
+            '<div class="row" style="margin-bottom: 10px"><div class="col-sm-12"><input id="titel" class="form-control"></div></div>' +
+            '<div class="row"><div class="col-sm-12"><textarea id="omschrijving" class="form-control"></textarea></div></div>',
             showCloseButton: true,
             showCancelButton: true,
             cancelButtonColor: '#d33',
             confirmButtonText:
                 'Verzoek maken',
-        }).then(function(email) {
+        }).then(function() {
             swal({
                 type: 'success',
                 title: 'Verzoek toegevoegd!',
+            }).then(function() {
+                var titel = $('#titel').val()
+                var description = $('#omschrijving').val()
+                var fullDate = new Date()
+                var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : + (fullDate.getMonth()+1);
+                var currentDate = fullDate.getDate() + "-" + twoDigitMonth + "-" + fullDate.getFullYear();
+
+                $('#services').append('<tr><td>'+ titel +'</td><td>'+ description +'</td><td>Mazeyar Rezaei</td><td>'+ currentDate +'</td></tr>')
             })
         })
     });
 </script>
-</body>
-</html>
