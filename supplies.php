@@ -5,15 +5,15 @@ $a->header();
 
 $db = new Database();
 
-$sql = 'SELECT name, amount, date_begin, date_end FROM `supplies`';
+$sql = 'SELECT `name`, `amount`, `date_begin`, `date_end` FROM `supplies`';
 $db->query($sql);
-
 ?>
 <head>
 <body>
   <!-- =============================================== -->
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="row">
+    <div class="col-sm-12">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -23,13 +23,13 @@ $db->query($sql);
     </section>
     <!-- Main content -->
     <section class="content">
-      <!-- box with table -->
+    <!-- box with table -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Title</h3>
+          <h3 class="box-title">TITEL</h3>
         </div>
         <div class="box-body">
-          Start creating your amazing application!
+          De huidige voorraad.
           <table class="table table-hover">
             <thead>
               <tr>
@@ -43,15 +43,15 @@ $db->query($sql);
             <tbody>
               <tr>
                 <?php while($row = $db->Fetch())
-                  {
-                    echo "  <tr>";
-                    echo "  <td>".$row['name']."  </td> ";
-                    echo "  <td>".$row['amount']."  </td> ";
-                    echo "  <td> - </td> ";
-                    echo "  <td>".$row['date_begin']."  </td> ";
-                    echo "  <td>".$row['date_end']."  </td> ";
-                    echo "  </tr>";
-                  }?>
+                {
+                  echo "  <tr>";
+                  echo "  <td>".$row['name']."  </td> ";
+                  echo "  <td>".$row['amount']."  </td> ";
+                  echo "  <td> - </td> ";
+                  echo "  <td>".$row['date_begin']."  </td> ";
+                  echo "  <td>".$row['date_end']."  </td> ";
+                  echo "  </tr>";
+                }?>
               </tr>
             </tbody>
           </table>
@@ -59,6 +59,7 @@ $db->query($sql);
       </div>
     </section>
   </div>
+</div>
 </body>
 </head>
 
