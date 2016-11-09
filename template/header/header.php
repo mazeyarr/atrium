@@ -166,12 +166,20 @@
     <div class="content-wrapper">
 
     <div class="row">
-        <div class="col-md-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">Nieuws</span>
-                    <span class="progress-description">asdasdsd</span>
+        <div class="menu-container">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Inbox</h3>
+
+                      <div class="box-tools pull-right">
+                        <div class="has-feedback">
+                          <input type="text" class="form-control input-sm" placeholder="Search Mail">
+                          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                        </div>
+                      </div>
+                      <!-- /.box-tools -->
+                    </div>
                 </div>
             </div>
         </div>
