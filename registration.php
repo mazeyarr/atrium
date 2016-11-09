@@ -20,6 +20,8 @@ require 'php/bootstrap.php';
   <!-- Theme style -->
   <link rel="stylesheet" href="css/AdminLTE.min.css">
 
+  <link rel="stylesheet" href="css/sweetalert2.min.css">
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -28,15 +30,6 @@ require 'php/bootstrap.php';
   <![endif]-->
 </head>
 <style>
-    .loginError {
-        box-sizing: border-box;
-        width: 100%;
-        border: 1px solid;
-        padding: 20px 20px;
-        text-align: center;
-        color: #D8000C;
-        background-color: #FFBABA;
-    }
 </style>
 <body class="hold-transition register-page">
 <div class="register-box">
@@ -66,8 +59,8 @@ require 'php/bootstrap.php';
 
       <div class="form-group has-feedback">
         <select class="form-control" name="gender" id="gender">
-         <option value="male">Man</option>
-         <option value="female">Vrouw</option>
+         <option value="man">Man</option>
+         <option value="vrouw">Vrouw</option>
        </select>
       </div>
 
@@ -116,22 +109,89 @@ require 'php/bootstrap.php';
 <!-- Masked Input Plugin -->
 <script src="tools/jquerymask.js"></script>
 
+<script src="js/sweetalert2.min.js"></script>
+
 <script type="text/javascript">
   $(document).ready(function(){
     $('#input_geboortedatum').mask('00/00/0000');
 
     $('#signup').click(function (e) {
-        var name            = $('#name')
-        var surname         = $('#surname')
-        var email           = $('#email')
-        var gender          = $('#gender')
-        var date            = $('#date')
-        var skills          = $('#skills')
-        var street          = $('#street')
-        var streetnumber    = $('#streetnumber')
+        e.preventDefault();
+        var name            = $('#name').val()
+        var surname         = $('#surname').val()
+        var email           = $('#email').val()
+        var gender          = $('#gender').val()
+        var date            = $('#date').val()
+        var skills          = $('#skills').val()
+        var street          = $('#street').val()
+        var streetnumber    = $('#streetnumber').val()
 
+        swal({
+            title: 'Submit email to run ajax request',
+            html: '<div class="row">' +
+                    '<div class="col-xs-6" style="text-align: left; padding-left:50px;">' +
+                        '<p>Naam:</p>' +
+                        '<p>Achternaam:</p>' +
+                        '<p>Email:</p>' +
+                        '<p>Geschlacht:</p>' +
+                        '<p>Geboortedatum:</p>' +
+                        '<p>Vaardigheden:</p>' +
+                        '<p>Adres:</p>' +
+                    '</div>' +
+                    '<div class="col-xs-6" style="text-align: left; padding-left:50px;">' +
+                        '<p>'+ name +'</p>' +
+                        '<p>'+ surname +'</p>' +
+                        '<p>'+ email +'</p>' +
+                        '<p>'+ gender +'</p>' +
+                        '<p>'+ date +'</p>' +
+                        '<p>'+ skills +'</p>' +
+                        '<p>'+ street + streetnumber +'</p>' +
+                    '</div>' +
+                    '</div>',
+            showCancelButton: true,
+            confirmButtonText: 'Registreren',
+            showLoaderOnConfirm: true,
+            allowOutsideClick: false
+        }).then(function(email) {
+            swal({
+                type: 'success',
+                title: 'Registratie voltooid!',
+            }).then(function () {
+                window.location.replace("/index.php");
+            })
+        })
 
-
+        /*swal({
+            title: 'Registratie',
+            type: 'success',
+            html:
+            '<div class="row">' +
+                '<div class="col-xs-6" style="text-align: left; padding-left:50px;">' +
+                    '<p>Naam:</p>' +
+                    '<p>Achternaam:</p>' +
+                    '<p>Email:</p>' +
+                    '<p>Geschlacht:</p>' +
+                    '<p>Geboortedatum:</p>' +
+                    '<p>Vaardigheden:</p>' +
+                    '<p>Adres:</p>' +
+                '</div>' +
+                '<div class="col-xs-6" style="text-align: left; padding-left:50px;">' +
+                    '<p>'+ name +'</p>' +
+                    '<p>'+ surname +'</p>' +
+                    '<p>'+ email +'</p>' +
+                    '<p>'+ gender +'</p>' +
+                    '<p>'+ date +'</p>' +
+                    '<p>'+ skills +'</p>' +
+                    '<p>'+ street + streetnumber +'</p>' +
+                '</div>' +
+            '</div>',
+            showCloseButton: true,
+            showCancelButton: true,
+            confirmButtonText:
+                '<i class="fa fa-thumbs-up"></i> Great!',
+            cancelButtonText:
+                '<i class="fa fa-thumbs-down"></i>'
+        })*/
     })
   });
 </script>
