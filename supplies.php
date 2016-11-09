@@ -1,104 +1,143 @@
 <?php
- require 'php/bootstrap.php';
- $a = new MainClass();
-$a->header();
-//
-// $db = new Database();
-//
-// $sql = 'SELECT supplies.name, supplies.amount, profiles.first_name, supplies.date_begin, supplies.date_end FROM supplies, profiles, users WHERE supplies.user_id = profiles.user_id';
-// $db->query($sql);
+   require 'php/bootstrap.php';
+   $page = new MainClass();
+   $page->header();
 ?>
-<head>
-<body>
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+   <h1>
+      Deelhoek
+   </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
    <div class="row">
       <div class="col-xs-12">
          <div class="box">
             <div class="box-header">
-               <h3 class="box-title">Deelhoek</h3>
-               <div class="box-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                     <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-                     <div class="input-group-btn">
-                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                     </div>
-                  </div>
-               </div>
+               <h3 class="box-title">Verzoeken</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive no-padding">
-              <div class="span2">
                <table class="table table-hover">
+                  <tbody id="services">
                   <tr>
                      <th>Voorwerp</th>
                      <th>Aanbieder</th>
-                     <th>Voorraad</th>
-                     <th width="100">Beschikbaar vanaf</th>
+                     <th>Vooraad</th>
+                     <th>Adres</th>
+                     <th width="100px">Reageer</th>
+
                   </tr>
-                  <tr>
-                     <td>Bladblazer</td>
-                     <td>'t Atrium</td>
-                     <td>1</td>
-                     <td><button type="button" class="btn btn-block btn-success">Reseveer</button></td>
+                  <tr id="jos">
+                     <td></td>
+                      <td id="name-jos">Jos van As</td>
+                     <td></td>
+                     <td></td>
+                     <td><button type="button" class="btn btn-info react" data-id="jos">Aanvraag</button></td>
                   </tr>
-                  <tr>
-                     <td>Heggenschaar</td>
-                     <td>Bart van Boven</td>
-                     <td>2</td>
-                     <td><button type="button" class="btn btn-block btn-success">Reseveer</button></td>
+                  <tr id="samantha">
+                     <td></td>
+                      <td id="name-samantha">Samantha van Gerwen</td>
+                     <td></td>
+                     <td></td>
+                     <td><button type="button" class="btn btn-info react" data-id="samantha">Aanvraag</button></td>
                   </tr>
-                  <tr>
-                     <td>Grasmaaier</td>
-                     <td>Charlie Cliff</td>
-                     <td>0</td>
-                     <td><button type="button" class="btn btn-block btn-warning disabled">Per 15-11-2016</button></td>
+                  <tr id="sjonnie">
+                     <td></td>
+                      <td id="name-sjonnie">Sjonnie de Boer</td>
+                     <td></td>
+                     <td></td>
+                     <td><button type="button" class="btn btn-info react" data-id="sjonnie">Aanvraag</button></td>
                   </tr>
-                  <tr>
-                     <td>Hogedrukspuit</td>
-                     <td>Dirk van den Dongen</td>
-                     <td>1</td>
-                     <td><button type="button" class="btn  btn-block btn-success">Reseveer</button></td>
+                  <tr id="anita">
+                     <td></td>
+                      <td id="name-anita">Anita de Boer</td>
+                     <td></td>
+                     <td></td>
+                     <td><button type="button" class="btn btn-info react" data-id="anita">Aanvraag</button></td>
                   </tr>
-                  <tr>
-                     <td>Speaker</td>
-                     <td>Ed van Eijk</td>
-                     <td>4</td>
-                     <td><button type="button" class="btn btn-block btn-success">Reseveer</button></td>
+                  <tr id="truusje">
+                     <td></td>
+                      <td id="name-truusje">Truusje de Wit</td>
+                     <td></td>
+                     <td></td>
+                     <td><button type="button" class="btn btn-info react" data-id="truusje">Aanvraag</button></td>
                   </tr>
-                  <tr>
-                     <td>Schroevendraaier</td>
-                     <td>'t Atrium</td>
-                     <td>6</td>
-                     <td><button type="button" class="btn btn-block btn-success">Reseveer</button></td>
-                  </tr>
-                  <tr>
-                     <td>Veerklemmen</td>
-                     <td>'t Atrium</td>
-                     <td>0</td>
-                     <td><button type="button" class="btn btn-block btn-warning disabled">Per 01-12-2016</button></td>
-                  </tr>
-                  <tr>
-                     <td>Klopboormachine</td>
-                     <td>Helga de Hel</td>
-                     <td>2</td>
-                     <td><button type="button" class="btn btn-block btn-success">Reseveer</button></td>
-                  </tr>
-                  <tr>
-                     <td>Freesmachines</td>
-                     <td>Iris innek</td>
-                     <td>0</td>
-                     <td><button type="button" class="btn btn-block btn-warning disabled">Per 21-11-2016</button></td>
-                  </tr>
-                  <tr>
-                     <td>Heteluchtpistool</td>
-                     <td>Jan Janssen</td>
-                     <td>3</td>
-                     <td><button type="button" class="btn btn-block btn-success">Reseveer nu</button></td>
-                  </tr>
+                  </tbody>
                </table>
             </div>
+            <!-- /.box-body -->
          </div>
+         <!-- /.box -->
+      </div>
+      <!-- /.col -->
+   </div>
+   <!-- /.row -->
+   <div class="row">
+      <div class="col-md-10"></div>
+      <div class="col-md-2">
+         <button type="button" id="request" class="btn btn-block btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Aanvraag Toevoegen</button>
       </div>
    </div>
-</body>
-</head>
-<?php $a->footer(); ?>
+</section>
+<!-- /.content -->
+
+<?php $page->footer(); ?>
+
+<script>
+    $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false
+        });
+    });
+    $('body').on('click', '.react', function () {
+        var id = $(this).attr('data-id')
+        var name = $('#name-' + id).html()
+        swal({
+            title: 'Reageer op ' + name,
+            html: '<div class="row"><div class="col-sm-12"><textarea id="omschrijving" class="form-control"></textarea></div></div>',
+            showCloseButton: true,
+            showCancelButton: true,
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Verstuur reactie',
+        }).then(function () {
+            swal({
+                type: 'success',
+                title: 'Reactie verstuurd!',
+            })
+        })
+    })
+    $( "#request" ).click(function() {
+        swal({
+            title: 'Voorwerp aan magazijn toevoegen',
+            html:
+            '<div class="row" style="margin-bottom: 10px"><div class="col-sm-12"><input type="text" id="item" class="form-control" placeholder="Voorwerp"></div></div>' +
+            '<div class="row"><div class="col-sm-12"><input type="number" id="amount" class="form-control" placeholder="Aantal"></div></div>',
+            showCloseButton: true,
+            showCancelButton: true,
+            cancelButtonColor: '#d33',
+            confirmButtonText:
+                'Voorwerp toevoegen',
+        }).then(function() {
+            swal({
+                type: 'success',
+                title: 'Voorwerp toegevoegd!',
+            })
+            var item = $('#item').val()
+            var amount = $('#amount').val()
+            var adres = 'Brandvoortsedijk 98a'
+
+            $('#services').append('<tr><td>'+ item +'</td><td id="name-mazeyar">Mazeyar Rezaei</td><td>'+ amount +'</td><td>'+ adres +'</td><td><button type="button" class="btn btn-info react" data-id="mazeyar">Aanvraag</button></td></tr>')
+        })
+    });
+</script>
+

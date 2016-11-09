@@ -1,15 +1,15 @@
 <?php
 
 require 'php/bootstrap.php';
-$a = new MainClass();
+$page = new MainClass();
 
-$a->header();
+$page->header();
 
 ?>
 
 <div class="row">
   <div class="menu-container">
-    <div class="col-md-4 col-sm-12 dash-menu-box">
+    <div class="col-md-4 col-sm-12 dash-menu-box" style="display: none;" id="dash-menu-item-1">
       <div class="box box-primary">
         <div class="box-header with-header">
           <h3 class="box-title">Activiteiten</h3>
@@ -22,7 +22,7 @@ $a->header();
         </div>
       </div>
     </div>
-    <div class="col-md-4 col-sm-12 dash-menu-box dash-diensten">
+    <div class="col-md-4 col-sm-12 dash-menu-box dash-diensten" style="display: none;" id="dash-menu-item-2">
       <div class="box box-primary">
         <div class="box-header with-header">
           <h3 class="box-title">Diensten</h3>
@@ -35,7 +35,7 @@ $a->header();
         </div>
       </div>
     </div>
-    <div class="col-md-4 col-sm-12 dash-menu-box">
+    <div class="col-md-4 col-sm-12 dash-menu-box" style="display: none;" id="dash-menu-item-3">
       <div class="box box-primary">
         <div class="box-header with-header">
           <h3 class="box-title">Deelhoek</h3>
@@ -51,4 +51,11 @@ $a->header();
   </div>
 </div>
 
-<?php $a->footer(); ?>
+<?php $page->footer(); ?>
+<script>
+  $( document ).ready(function () {
+    $('#dash-menu-item-1').fadeIn(1000)
+    $('#dash-menu-item-2').fadeIn(2300)
+    $('#dash-menu-item-3').fadeIn(1000)
+  })
+</script>

@@ -52,7 +52,7 @@ require 'php/bootstrap.php';
   						<div class="panel-body">
   							<img src="img/coin1.png" class="image_coin"/>
   							<hr/>
-  							<button type="button" class="btn btn-success btn_purchase">Koop 10</button>
+  							<button type="button" class="btn btn-success btn_purchase">Koop <span class="coin_amount">10</span></button>
   						</div>
   					</div>
   				</div>
@@ -62,7 +62,7 @@ require 'php/bootstrap.php';
   						<div class="panel-body">
   							<img src="img/coin2.png" class="image_coin"/>
   							<hr/>
-  							<button type="button" class="btn btn-success btn_purchase">Koop 50</button>
+  							<button type="button" class="btn btn-success btn_purchase">Koop <span class="coin_amount">50</span></button>
   						</div>
   					</div>
   				</div>
@@ -72,7 +72,7 @@ require 'php/bootstrap.php';
   						<div class="panel-body">
   							<img src="img/coin3.png" class="image_coin"/>
   							<hr/>
-  							<button type="button" class="btn btn-success btn_purchase">Koop 250</button>
+  							<button type="button" class="btn btn-success btn_purchase">Koop <span class="coin_amount">250</span></button>
   						</div>
   					</div>
   				</div>
@@ -82,7 +82,7 @@ require 'php/bootstrap.php';
   						<div class="panel-body">
   							<img src="img/coin4.png" class="image_coin"/>
   							<hr/>
-  							<button type="button" class="btn btn-success btn_purchase">Koop 1000</button>
+  							<button type="button" class="btn btn-success btn_purchase">Koop <span class="coin_amount">1000</span></button>
   						</div>
   					</div>
   				</div>
@@ -114,7 +114,10 @@ require 'php/bootstrap.php';
 <!-- page script -->
 <script>
     $( ".btn_purchase" ).click(function() {
-      swal("BrandCoins gekocht!")
+        var coin_amount = $(this).find('.coin_amount').html()
+      swal("BrandCoins gekocht!").then(function () {
+          window.location.replace("/profile.php?coinadd=1&coins="+coin_amount)
+	  })
     });
 </script>
 </body>

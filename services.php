@@ -111,7 +111,7 @@ $page->footer();
         });
     });
 
-    $(".react").click(function () {
+    $('body').on('click', '.react', function () {
         var id = $(this).attr('data-id')
         var name = $('#name-' + id).html()
         swal({
@@ -143,15 +143,13 @@ $page->footer();
             swal({
                 type: 'success',
                 title: 'Verzoek toegevoegd!',
-            }).then(function() {
-                var titel = $('#titel').val()
-                var description = $('#omschrijving').val()
-                var fullDate = new Date()
-                var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : + (fullDate.getMonth()+1);
-                var currentDate = fullDate.getDate() + "-" + twoDigitMonth + "-" + fullDate.getFullYear();
-
-                $('#services').append('<tr><td>'+ titel +'</td><td>'+ description +'</td><td>Mazeyar Rezaei</td><td>'+ currentDate +'</td></tr>')
             })
+            var titel = $('#titel').val()
+            var description = $('#omschrijving').val()
+            var fullDate = new Date()
+            var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : + (fullDate.getMonth()+1);
+            var currentDate = fullDate.getDate() + "-" + twoDigitMonth + "-" + fullDate.getFullYear();
+            $('#services').append('<tr><td>'+ titel +'</td><td>'+ description +'</td><td id="name-mazeyar">Mazeyar Rezaei</td><td>Brandvoortsedijk 98a</td><td>'+ currentDate +'</td><td><button type="button" class="btn btn-info react" data-id="mazeyar">Reageer</button></td></tr>')
         })
     });
 </script>

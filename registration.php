@@ -32,7 +32,7 @@ require 'php/bootstrap.php';
 <style>
 </style>
 <body class="hold-transition register-page">
-<div class="register-box">
+<div class="register-box" id="signup-box" style="display: none;">
   <div class="register-logo">
     <a href="index2.html"><strong>'t</strong> Atrium</a>
   </div>
@@ -113,6 +113,7 @@ require 'php/bootstrap.php';
 
 <script type="text/javascript">
   $(document).ready(function(){
+    $('#signup-box').fadeIn(1200)
     $('#input_geboortedatum').mask('00/00/0000');
 
     $('#signup').click(function (e) {
@@ -160,38 +161,6 @@ require 'php/bootstrap.php';
                 window.location.replace("/index.php");
             })
         })
-
-        /*swal({
-            title: 'Registratie',
-            type: 'success',
-            html:
-            '<div class="row">' +
-                '<div class="col-xs-6" style="text-align: left; padding-left:50px;">' +
-                    '<p>Naam:</p>' +
-                    '<p>Achternaam:</p>' +
-                    '<p>Email:</p>' +
-                    '<p>Geschlacht:</p>' +
-                    '<p>Geboortedatum:</p>' +
-                    '<p>Vaardigheden:</p>' +
-                    '<p>Adres:</p>' +
-                '</div>' +
-                '<div class="col-xs-6" style="text-align: left; padding-left:50px;">' +
-                    '<p>'+ name +'</p>' +
-                    '<p>'+ surname +'</p>' +
-                    '<p>'+ email +'</p>' +
-                    '<p>'+ gender +'</p>' +
-                    '<p>'+ date +'</p>' +
-                    '<p>'+ skills +'</p>' +
-                    '<p>'+ street + streetnumber +'</p>' +
-                '</div>' +
-            '</div>',
-            showCloseButton: true,
-            showCancelButton: true,
-            confirmButtonText:
-                '<i class="fa fa-thumbs-up"></i> Great!',
-            cancelButtonText:
-                '<i class="fa fa-thumbs-down"></i>'
-        })*/
     })
   });
 </script>

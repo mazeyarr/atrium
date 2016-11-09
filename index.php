@@ -28,7 +28,7 @@ require 'php/bootstrap.php';
   <![endif]-->
 </head>
 <body class="hold-transition register-page">
-<div class="register-box">
+<div class="register-box" id="signin-box" style="display: none;">
   <div class="register-logo">
     <a href="index2.html"><strong>'t</strong> Atrium</a>
   </div>
@@ -44,6 +44,10 @@ require 'php/bootstrap.php';
       <div class="form-group has-feedback">
         <input type="password" class="form-control" name="password" placeholder="Wachtwoord" id="password">
         <span class="fa fa-lock form-control-feedback"></span>
+      </div>
+
+      <div class="form-group has-feedback">
+        <a href="/registration.php" class="">Geen account ?</a>
       </div>
       <div class="row">
         <!-- /.col -->
@@ -64,6 +68,7 @@ require 'php/bootstrap.php';
 <script src="js/bootstrap.min.js"></script>
 <script>
   $( document ).ready(function () {
+    $('#signin-box').fadeIn(1000)
     $('#login').click(function (e) {
       e.preventDefault()
       if ($('#username').val() == 'mazeyar' && $('#password').val() == 'test123') window.location.replace("/dashboard.php")
