@@ -18,7 +18,7 @@ $a->header();
           Klik op de knop hieronder om naar de activiteiten te gaan.<br><br>
           Op het volgende scherm kunt u uzelf opgeven voor activiteiten of uw eigen activiteit organiseren.<br>
           <i class="ion ion-calendar dash-menu-icon"></i>
-          <a href="#" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar Activiteiten</b></a>
+          <a href="ativities.php" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar Activiteiten</b></a>
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@ $a->header();
           Klik op de knop hieronder om naar de diensten te gaan.<br><br>
           Hier kunt u gebruik maken van diensten welke zijn aangeboden door andere wijkbewoners of uw eigen dienst aanbieden.<br>
           <i class="ion ion-android-people dash-menu-icon"></i>
-          <a href="#" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar Diensten</b></a>
+          <a href="services.php" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar Diensten</b></a>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ $a->header();
           Klik op de knop hieronder om naar de deelhoek te gaan.<br><br>
           In de Deelhoek kunt u spullen lenen en/of uitlenen van zowel wijkbewoners als 't Atrium.<br>
           <i class="ion ion-hammer dash-menu-icon"></i>
-          <a href="#" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar de Deelhoek</b></a>
+          <a href="supplies.php" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar de Deelhoek</b></a>
         </div>
       </div>
     </div>
