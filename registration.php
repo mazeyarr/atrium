@@ -27,6 +27,17 @@ require 'php/bootstrap.php';
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
+<style>
+    .loginError {
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid;
+        padding: 20px 20px;
+        text-align: center;
+        color: #D8000C;
+        background-color: #FFBABA;
+    }
+</style>
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
@@ -36,48 +47,59 @@ require 'php/bootstrap.php';
   <div class="register-box-body">
     <p class="login-box-msg">Gebruiker registreren</p>
 
-    <form action="index.html" method="post">
+    <form action="#" method="post">
+
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="first_name" placeholder="Voornaam">
+        <input type="text" class="form-control" name="first_name" placeholder="Voornaam" id="name">
         <span class="fa fa-user form-control-feedback"></span>
       </div>
+
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="last_name" placeholder="Achternaam">
+        <input type="text" class="form-control" name="last_name" placeholder="Achternaam" id="surname">
         <span class="fa fa-users form-control-feedback"></span>
       </div>
+
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" name="email" placeholder="E-mail">
+        <input type="email" class="form-control" name="email" placeholder="E-mail" id="email">
         <span class="fa fa-envelope form-control-feedback"></span>
       </div>
+
       <div class="form-group has-feedback">
-        <select class="form-control" name="gender" id="sel1">
+        <select class="form-control" name="gender" id="gender">
          <option value="male">Man</option>
          <option value="female">Vrouw</option>
        </select>
       </div>
+
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" id="input_geboortedatum" name="birthday" placeholder="dd/mm/jjjj">
+        <input type="text" class="form-control" id="input_geboortedatum" name="birthday" placeholder="dd/mm/jjjj" id="date">
         <span class="fa fa-calendar form-control-feedback"></span>
       </div>
+
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="skills" placeholder="Vaardigheden">
+        <input type="text" class="form-control" name="skills" placeholder="Vaardigheden" id="skills">
         <span class="fa fa-wrench form-control-feedback"></span>
       </div>
+
       <div class="form-group has-feedback">
         <div class="row">
           <div class="col-sm-8">
-            <input type="text" class="form-control" name="street" placeholder="Straatnaam">
+            <input type="text" class="form-control" name="street" placeholder="Straatnaam" id="street">
           </div>
           <div class="col-sm-4">
-            <input type="text" class="form-control" name="house_number" placeholder="#">
+            <input type="text" class="form-control" name="house_number" placeholder="#" id="streetnumber">
           </div>
           <span class="fa fa-home form-control-feedback"></span>
         </div>
       </div>
+
+      <div class="form-group has-feedback">
+
+      </div>
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Registreren</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat" id="signup">Registreren</button>
         </div>
         <!-- /.col -->
       </div>
@@ -99,6 +121,20 @@ require 'php/bootstrap.php';
 <script type="text/javascript">
   $(document).ready(function(){
     $('#input_geboortedatum').mask('00/00/0000');
+
+    $('#signup').click(function (e) {
+        var name            = $('#name')
+        var surname         = $('#surname')
+        var email           = $('#email')
+        var gender          = $('#gender')
+        var date            = $('#date')
+        var skills          = $('#skills')
+        var street          = $('#street')
+        var streetnumber    = $('#streetnumber')
+
+
+
+    })
   });
 </script>
 </body>
