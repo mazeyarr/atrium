@@ -32,39 +32,39 @@
 
                   </tr>
                   <tr id="jos">
-                     <td></td>
+                     <td>Klopboormachine</td>
                       <td id="name-jos">Jos van As</td>
-                     <td></td>
-                     <td></td>
-                     <td><button type="button" class="btn btn-info react" data-id="jos">Aanvraag</button></td>
+                     <td>1</td>
+                     <td>Sint Antoniusweg 2</td>
+                     <td><button type="button" class="btn btn-block btn-info react" data-id="jos">Aanvraag</button></td>
                   </tr>
                   <tr id="samantha">
-                     <td></td>
+                     <td>Boormachine</td>
                       <td id="name-samantha">Samantha van Gerwen</td>
-                     <td></td>
-                     <td></td>
-                     <td><button type="button" class="btn btn-info react" data-id="samantha">Aanvraag</button></td>
+                     <td>0</td>
+                     <td>Lorreman 5</td>
+                     <td><button type="button" class="btn btn-block btn-warning disabled" data-id="samantha">Per 13-Nov</button></td>
                   </tr>
                   <tr id="sjonnie">
-                     <td></td>
-                      <td id="name-sjonnie">Sjonnie de Boer</td>
-                     <td></td>
-                     <td></td>
-                     <td><button type="button" class="btn btn-info react" data-id="sjonnie">Aanvraag</button></td>
+                     <td>Steekwagen</td>
+                      <td id="name-sjonnie">'t Atrium</td>
+                     <td>2</td>
+                     <td>Paltrokmolen 8</td>
+                     <td><button type="button" class="btn btn-block btn-info react" data-id="sjonnie">Aanvraag</button></td>
                   </tr>
                   <tr id="anita">
-                     <td></td>
+                     <td>Dopsleutelset</td>
                       <td id="name-anita">Anita de Boer</td>
-                     <td></td>
-                     <td></td>
-                     <td><button type="button" class="btn btn-info react" data-id="anita">Aanvraag</button></td>
+                     <td>0</td>
+                     <td>Roefvoort 27</td>
+                     <td><button type="button" class="btn btn-block btn-warning disabled" data-id="anita">Per 21-Nov</button></td>
                   </tr>
                   <tr id="truusje">
-                     <td></td>
-                      <td id="name-truusje">Truusje de Wit</td>
-                     <td></td>
-                     <td></td>
-                     <td><button type="button" class="btn btn-info react" data-id="truusje">Aanvraag</button></td>
+                     <td>Waterpas</td>
+                      <td id="name-truusje">'t Atrium</td>
+                     <td>5</td>
+                     <td>Paltrokmolen 8</td>
+                     <td><button type="button" class="btn btn-block btn-info react" data-id="truusje">Aanvraag</button></td>
                   </tr>
                   </tbody>
                </table>
@@ -140,4 +140,3 @@
         })
     });
 </script>
-
