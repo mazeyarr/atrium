@@ -71,7 +71,7 @@ require 'php/bootstrap.php';
     $('#signin-box').fadeIn(1000)
     $('#login').click(function (e) {
       e.preventDefault()
-      if ($('#username').val() == 'mazeyar' && $('#password').val() == 'test123') window.location.replace("/dashboard.php")
+      if ($('#username').val() == 'mazeyar' && $('#password').val() == 'test123') window.location.replace("dashboard.php")
       if ($('#username') != 'mazeyar') error('username')
       if ($('#password') != 'test123') error('password')
     })
