@@ -136,7 +136,7 @@
             var amount = $('#amount').val()
             var adres = 'Brandvoortsedijk 98a'
 
-            $('#services').append('<tr><td>'+ item +'</td><td id="name-mazeyar">Mazeyar Rezaei</td><td>'+ amount +'</td><td>'+ adres +'</td><td><button type="button" class="btn btn-info react" data-id="mazeyar">Aanvraag</button></td></tr>')
+            $('#services').append('<tr><td>'+ item +'</td><td id="name-mazeyar">Mazeyar Rezaei</td><td>'+ amount +'</td><td>'+ adres +'</td><td><button type="button" class="btn btn-block btn-info react" data-id="mazeyar">Aanvraag</button></td></tr>')
         })
     });
 </script>
