@@ -33,14 +33,14 @@
                   </tr>
                   <tr id="jos">
                      <td>Klopboormachine</td>
-                      <td id="name-jos">Jos van As</td>
+                      <td id="name-jos">Joop de Munck</td>
                      <td>1</td>
                      <td>Sint Antoniusweg 2</td>
                      <td><button type="button" class="btn btn-block btn-info react" data-id="jos">Reserveer</button></td>
                   </tr>
                   <tr id="samantha">
                      <td>Boormachine</td>
-                      <td id="name-samantha">Samantha van Gerwen</td>
+                      <td id="name-samantha">Priscilla Janssen</td>
                      <td>0</td>
                      <td>Lorreman 5</td>
                      <td><button type="button" class="btn btn-block btn-warning disabled" data-id="samantha">13-Nov</button></td>
@@ -48,13 +48,13 @@
                   <tr id="sjonnie">
                      <td>Steekwagen</td>
                       <td id="name-sjonnie">'t Atrium</td>
-                     <td>2</td>
+                     <td id="minus-item-id-1">2</td>
                      <td>Paltrokmolen 8</td>
-                     <td><button type="button" class="btn btn-block btn-info react" data-id="sjonnie">Reserveer</button></td>
+                     <td><button type="button" data-id-item="minus-item-id-1" class="btn btn-block btn-info react" data-id="sjonnie" id="minus-item">Reserveer</button></td>
                   </tr>
                   <tr id="anita">
                      <td>Dopsleutelset</td>
-                      <td id="name-anita">Anita de Boer</td>
+                      <td id="name-anita">Gerard Gerardsen</td>
                      <td>0</td>
                      <td>Roefvoort 27</td>
                      <td><button type="button" class="btn btn-block btn-warning disabled" data-id="anita">21-Nov</button></td>
@@ -141,4 +141,9 @@
             $('#services').append('<tr><td>'+ item +'</td><td id="name-mazeyar">Mazeyar Rezaei</td><td>'+ amount +'</td><td>'+ adres +'</td><td><button type="button" class="btn btn-block btn-info react" data-id="mazeyar">Reserveer</button></td></tr>')
         })
     });
+
+    $('#minus-item').click(function (e) {
+        var item_id = $(this).attr('data-id-item')
+        $('#' + item_id).html('1')
+    })
 </script>

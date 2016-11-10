@@ -38,7 +38,7 @@ $page->header();
                             <td>Belastingaangifte</td>
                             <td>Ik heb het de komende periode erg druk, dus zoek ik iemand om voor mij de belastingaangifte te doen.</td>
                             <td id="name-jos">Jos van As</td>
-                            <td>Adres</td>
+                            <td>Kennedylaan 15</td>
                             <td><?php echo date('d-m-Y');?></td>
                             <td><button type="button" class="btn btn-info react" data-id="jos">Reageer</button></td>
                         </tr>
@@ -46,7 +46,7 @@ $page->header();
                             <td>Gaatje boren</td>
                             <td>Het zou fijn zijn als iemand bij mij een gaatje in de muur kan komen boren, omdat ik het gereedschap daarvoor niet heb</td>
                             <td id="name-samantha">Samantha van Gerwen</td>
-                            <td>Adres</td>
+                            <td>Jonker Dorisstraat 99</td>
                             <td><?php echo date('d-m-Y');?></td>
                             <td><button type="button" class="btn btn-info react" data-id="samantha">Reageer</button></td>
                         </tr>
@@ -54,7 +54,7 @@ $page->header();
                             <td>Koelkast kapot</td>
                             <td>Mijn koelkast wordt niet meer koud, kan iemand die hier verstand van heeft even langs komen?</td>
                             <td id="name-sjonnie">Sjonnie de Boer</td>
-                            <td>Adres</td>
+                            <td>Het Hof 45</td>
                             <td><?php echo date('d-m-Y');?></td>
                             <td><button type="button" class="btn btn-info react" data-id="sjonnie">Reageer</button></td>
                         </tr>
@@ -62,7 +62,7 @@ $page->header();
                             <td>Autoreparatie</td>
                             <td>Mijn auto start niet meer, kan iemand mij hierbij helpen?</td>
                             <td id="name-anita">Anita de Boer</td>
-                            <td>Adres</td>
+                            <td>Kabouterstraat 34</td>
                             <td><?php echo date('d-m-Y');?></td>
                             <td><button type="button" class="btn btn-info react" data-id="anita">Reageer</button></td>
                         </tr>
@@ -70,7 +70,7 @@ $page->header();
                             <td>Computerproblemen</td>
                             <td>Mijn computer crasht elke keer nadat Windows is geladen</td>
                             <td id="name-truusje">Truusje de Wit</td>
-                            <td>Adres</td>
+                            <td>Sint Trudohof 12</td>
                             <td><?php echo date('d-m-Y');?></td>
                             <td><button type="button" class="btn btn-info react" data-id="truusje">Reageer</button></td>
                         </tr>

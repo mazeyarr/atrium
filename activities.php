@@ -29,7 +29,7 @@ $page->header();
                             <th>Titel</th>
                             <th>Omschrijving</th>
                             <th>Gebruiker</th>
-                            <th>Adres</th>
+                            <th>Locatie</th>
                             <th>Datum</th>
                             <th>Begin</th>
                             <th>Eind</th>
@@ -37,53 +37,53 @@ $page->header();
 
                         </tr>
                         <tr id="jos">
-                            <td>Belastingaangifte</td>
-                            <td>Ik heb het de komende periode erg druk, dus zoek ik iemand om voor mij de belastingaangifte te doen.</td>
-                            <td id="name-jos">Jos van As</td>
-                            <td>Adres</td>
+                            <td>Kookcursus</td>
+                            <td>We gaan met zijn allen lekkere spaghetti bolognese maken.</td>
+                            <td id="name-anouk">Anouk van der Sar</td>
+                            <td>Atrium</td>
                             <td><?php echo date('d-m-Y');?></td>
-                            <td>10:30</td>
-                            <td>17:00</td>
-                            <td><button type="button" class="btn btn-info react" data-id="jos">Aanmelden</button></td>
+                            <td>15:30</td>
+                            <td>20:00</td>
+                            <td><button type="button" class="btn btn-info react" data-id="anouk">Aanmelden</button></td>
                         </tr>
                         <tr id="samantha">
-                            <td>Gaatje boren</td>
-                            <td>Het zou fijn zijn als iemand bij mij een gaatje in de muur kan komen boren, omdat ik het gereedschap daarvoor niet heb</td>
-                            <td id="name-samantha">Samantha van Gerwen</td>
-                            <td>Adres</td>
+                            <td>Workshop LinkedIn</td>
+                            <td>Ik weet dat er in de wijk een aantal studenten wonen die de komende tijd af gaan studeren, en ik wil jullie graag helpen.</td>
+                            <td id="name-sebas">Sebastiaan Liebrechts</td>
+                            <td>Atrium</td>
                             <td><?php echo date('d-m-Y');?></td>
                             <td>13:45</td>
-                            <td>18:00</td>
-                            <td><button type="button" class="btn btn-info react" data-id="samantha">Aanmelden</button></td>
+                            <td>15:45</td>
+                            <td><button type="button" class="btn btn-info react" data-id="sebas">Aanmelden</button></td>
                         </tr>
-                        <tr id="sjonnie">
-                            <td>Koelkast kapot</td>
-                            <td>Mijn koelkast wordt niet meer koud, kan iemand die hier verstand van heeft even langs komen?</td>
-                            <td id="name-sjonnie">Sjonnie de Boer</td>
-                            <td>Adres</td>
+                        <tr id="bas">
+                            <td>Cursus programmeren</td>
+                            <td>Ik organiseer binnenkort een cursus om mensen de basis van programmeren bij te brengen, omdat veel mensen niet weten hoe leuk het is</td>
+                            <td id="name-bas">Bas de Vos</td>
+                            <td>Atrium</td>
                             <td><?php echo date('d-m-Y');?></td>
                             <td>13:00</td>
-                            <td>17:00</td>
+                            <td>16:00</td>
                             <td><button type="button" class="btn btn-info react" data-id="sjonnie">Aanmelden</button></td>
                         </tr>
                         <tr id="anita">
-                            <td>Autoreparatie</td>
-                            <td>Mijn auto start niet meer, kan iemand mij hierbij helpen?</td>
+                            <td>Make-up workshop</td>
+                            <td>Hallo meiden! Ik ben een make-up artiest en ik wil jullie graag een aantal dingen bijbrengen over vanalles en nog wat dat met make-up te maken heeft</td>
                             <td id="name-anita">Anita de Boer</td>
-                            <td>Adres</td>
+                            <td>Atrium</td>
                             <td><?php echo date('d-m-Y');?></td>
                             <td>20:00</td>
-                            <td>23:00</td>
+                            <td>22:00</td>
                             <td><button type="button" class="btn btn-info react" data-id="anita">Aanmelden</button></td>
                         </tr>
                         <tr id="truusje">
-                            <td>Computerproblemen</td>
-                            <td>Mijn computer crasht elke keer nadat Windows is geladen</td>
+                            <td>Breien</td>
+                            <td>Mijn hobby is breien, ik doe het al tientallen jaren en ik zou mensen hier graag meer over vertellen</td>
                             <td id="name-truusje">Truusje de Wit</td>
-                            <td>Adres</td>
+                            <td>Atrium</td>
                             <td><?php echo date('d-m-Y');?></td>
                             <td>14:00</td>
-                            <td>19:00</td>
+                            <td>17:00</td>
                             <td><button type="button" class="btn btn-info react" data-id="truusje">Aanmelden</button></td>
                         </tr>
                         </tbody>
@@ -167,7 +167,7 @@ $page->footer();
             var fullDate = new Date()
             var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : + (fullDate.getMonth()+1);
             var currentDate = fullDate.getDate() + "-" + twoDigitMonth + "-" + fullDate.getFullYear();
-            $('#services').append('<tr><td>'+ titel +'</td><td>'+ description +'</td><td id="name-mazeyar">Mazeyar Rezaei</td><td>Brandvoortsedijk 98a</td><td>'+ currentDate +'</td><td>'+ begin +'</td><td>'+ end +'</td><td><button type="button" class="btn btn-info react" data-id="mazeyar">Aanmelden</button></td></tr>')
+            $('#services').append('<tr><td>'+ titel +'</td><td>'+ description +'</td><td id="name-mazeyar">Mazeyar Rezaei</td><td>Atrium</td><td>'+ currentDate +'</td><td>'+ begin +'</td><td>'+ end +'</td><td><button type="button" class="btn btn-info react" data-id="mazeyar">Aanmelden</button></td></tr>')
         })
     });
 </script>

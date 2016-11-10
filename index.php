@@ -45,10 +45,6 @@ require 'php/bootstrap.php';
         <input type="password" class="form-control" name="password" placeholder="Wachtwoord" id="password">
         <span class="fa fa-lock form-control-feedback"></span>
       </div>
-
-      <div class="form-group has-feedback">
-        <a href="registration.php" class="">Geen account ?</a>
-      </div>
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
