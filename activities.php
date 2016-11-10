@@ -127,12 +127,12 @@ $page->footer();
         var id = $(this).attr('data-id')
         var name = $('#name-' + id).html()
         swal({
-            title: 'Aanmelden bij de activiteit van ' + name,
+            title: 'Aanmelden bij de activiteit van ' + name + '?',
             showCloseButton: true,
             showCancelButton: true,
             cancelButtonColor: '#d33',
             confirmButtonText: 'Bevestig',
-            confirmButtonText: 'Annuleren',
+            cancelButtonText: 'Annuleren',
         }).then(function () {
             swal({
                 type: 'success',

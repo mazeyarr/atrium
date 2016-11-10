@@ -141,7 +141,7 @@ $page->footer();
             showCancelButton: true,
             cancelButtonColor: '#d33',
             confirmButtonText:
-                'Verzoek maken',
+                'Bevestig',
         }).then(function() {
             swal({
                 type: 'success',
