@@ -104,15 +104,15 @@
         var name = $('#name-' + id).html()
         swal({
             title: 'Voorwerp reserveren?',
-            html: '<div class="row"><div class="col-sm-12"><textarea id="omschrijving" class="form-control"></textarea></div></div>',
             showCloseButton: true,
             showCancelButton: true,
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Verstuur reactie',
+            confirmButtonText: 'Bevestig',
+            cancelButtonText: 'Annuleren',
         }).then(function () {
             swal({
                 type: 'success',
-                title: 'Reactie verstuurd!',
+                title: 'Voorwerp gereserveerd!',
             })
         })
     })
