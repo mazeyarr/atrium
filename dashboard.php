@@ -15,8 +15,8 @@ $page->header();
           <h3 class="box-title">Activiteiten</h3>
         </div>
         <div class="box-body">
-          Klik op de knop hieronder om naar de activiteiten te gaan.<br><br>
-          Op het volgende scherm kunt u uzelf opgeven voor activiteiten of uw eigen activiteit organiseren.<br>
+          Klik op de knop hieronder om naar Activiteiten te gaan<br><br>
+          Hier kunt u uzelf opgeven voor aangeboden activiteiten, of uw eigen activiteit organiseren<br>
           <i class="ion ion-calendar dash-menu-icon"></i>
           <a href="activities.php" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar Activiteiten</b></a>
         </div>
@@ -28,8 +28,8 @@ $page->header();
           <h3 class="box-title">Diensten</h3>
         </div>
         <div class="box-body">
-          Klik op de knop hieronder om naar de diensten te gaan.<br><br>
-          Hier kunt u gebruik maken van diensten welke zijn aangeboden door andere wijkbewoners of uw eigen dienst aanbieden.<br>
+          Klik op de knop hieronder om naar Diensten te gaan<br><br>
+          Hier kunt u gebruik maken van de door buurt aangeboden diensten, of uw eigen dienst aanbieden<br>
           <i class="ion ion-android-people dash-menu-icon"></i>
           <a href="services.php" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar Diensten</b></a>
         </div>
@@ -41,8 +41,8 @@ $page->header();
           <h3 class="box-title">Deelhoek</h3>
         </div>
         <div class="box-body">
-          Klik op de knop hieronder om naar de deelhoek te gaan.<br><br>
-          In de Deelhoek kunt u spullen lenen en/of uitlenen van zowel wijkbewoners als 't Atrium.<br>
+          Klik op de knop hieronder om naar Deelhoek te gaan<br><br>
+          Hier kunt u de door buurt aangeboden spullen lenen, of uw eigen spullen uitlenen aan de buurt<br>
           <i class="ion ion-hammer dash-menu-icon"></i>
           <a href="supplies.php" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar de Deelhoek</b></a>
         </div>
