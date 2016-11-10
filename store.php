@@ -116,7 +116,7 @@ require 'php/bootstrap.php';
     $( ".btn_purchase" ).click(function() {
         var coin_amount = $(this).find('.coin_amount').html()
       swal("BrandCoins gekocht!").then(function () {
-          window.location.replace("/profile.php?coinadd=1&coins="+coin_amount)
+          window.location.replace("profile.php?coinadd=1&coins="+coin_amount)
 	  })
     });
 </script>

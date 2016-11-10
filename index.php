@@ -47,7 +47,7 @@ require 'php/bootstrap.php';
       </div>
 
       <div class="form-group has-feedback">
-        <a href="/registration.php" class="">Geen account ?</a>
+        <a href="registration.php" class="">Geen account ?</a>
       </div>
       <div class="row">
         <!-- /.col -->
