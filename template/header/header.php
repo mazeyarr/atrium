@@ -33,7 +33,7 @@
         <nav class="navbar navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="/dashboard.php" class="navbar-brand"><b>'T </b>ATRIUM</a>
+                    <a href="dashboard.php" class="navbar-brand"><b>'T </b>ATRIUM</a>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                         <i class="fa fa-bars"></i>
                     </button>
@@ -42,7 +42,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="/dashboard.php">Dashboard</a></li>
+                        <li><a href="dashboard.php">Dashboard</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -70,10 +70,10 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="/profile.php" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="profile.php" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="/index.php" class="btn btn-default btn-flat">Uitloggen</a>
+                                        <a href="index.php" class="btn btn-default btn-flat">Uitloggen</a>
                                     </div>
                                 </li>
                             </ul>
