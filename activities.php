@@ -99,7 +99,7 @@ $page->header();
     <div class="row">
         <div class="col-md-10"></div>
         <div class="col-md-2">
-            <button type="button" id="request" class="btn btn-block btn-success">Activiteit aanmaken</button>
+            <button type="button" id="request" class="btn btn-block btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Activiteit aanmaken</button>
         </div>
     </div>
 </section>
@@ -131,7 +131,8 @@ $page->footer();
             showCloseButton: true,
             showCancelButton: true,
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Meld aan',
+            confirmButtonText: 'Bevestig',
+            confirmButtonText: 'Annuleren',
         }).then(function () {
             swal({
                 type: 'success',
@@ -150,7 +151,7 @@ $page->footer();
             showCancelButton: true,
             cancelButtonColor: '#d33',
             cancelButtonText:
-                'Annuleer',
+                'Annuleren',
             confirmButtonText:
                 'Bevestig',
         }).then(function() {

@@ -87,7 +87,7 @@ $page->header();
     <div class="row">
         <div class="col-md-10"></div>
         <div class="col-md-2">
-            <button type="button" id="request" class="btn btn-block btn-success">Verzoek maken</button>
+            <button type="button" id="request" class="btn btn-block btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Verzoek maken</button>
         </div>
     </div>
 </section>
@@ -120,7 +120,10 @@ $page->footer();
             showCloseButton: true,
             showCancelButton: true,
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Verstuur reactie',
+            confirmButtonText:
+                'Bevestig',
+            cancelmButtonText:
+                'Annuleren'
         }).then(function () {
             swal({
                 type: 'success',
@@ -132,8 +135,8 @@ $page->footer();
         swal({
             title: 'Verzoek maken',
             html:
-            '<div class="row" style="margin-bottom: 10px"><div class="col-sm-12"><input id="titel" class="form-control"></div></div>' +
-            '<div class="row"><div class="col-sm-12"><textarea id="omschrijving" class="form-control"></textarea></div></div>',
+            '<div class="row" style="margin-bottom: 10px"><div class="col-sm-12"><input id="titel" class="form-control" placeholder="Titel"></div></div>' +
+            '<div class="row"><div class="col-sm-12"><textarea id="omschrijving" class="form-control" placeholder="Omschrijving"></textarea></div></div>',
             showCloseButton: true,
             showCancelButton: true,
             cancelButtonColor: '#d33',
