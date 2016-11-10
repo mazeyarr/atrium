@@ -18,7 +18,7 @@ $page->header();
           Klik op de knop hieronder om naar de activiteiten te gaan.<br><br>
           Op het volgende scherm kunt u uzelf opgeven voor activiteiten of uw eigen activiteit organiseren.<br>
           <i class="ion ion-calendar dash-menu-icon"></i>
-          <a href="ativities.php" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar Activiteiten</b></a>
+          <a href="activities.php" class="btn btn-primary btn-block btn-dash-menu"><b>Ga naar Activiteiten</b></a>
         </div>
       </div>
     </div>
