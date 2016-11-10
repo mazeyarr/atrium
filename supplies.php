@@ -17,7 +17,7 @@
       <div class="col-xs-12">
          <div class="box">
             <div class="box-header">
-               <h3 class="box-title">Verzoeken</h3>
+               <h3 class="box-title">Beschikbare voorwerpen</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive no-padding">
@@ -25,46 +25,46 @@
                   <tbody id="services">
                   <tr>
                      <th>Voorwerp</th>
-                     <th>Aanbieder</th>
-                     <th>Vooraad</th>
+                     <th>Eigenaar</th>
+                     <th>Voorraad</th>
                      <th>Adres</th>
                      <th width="100px">Reageer</th>
 
                   </tr>
                   <tr id="jos">
                      <td>Klopboormachine</td>
-                      <td id="name-jos">Jos van As</td>
+                      <td id="name-jos">Joop de Munck</td>
                      <td>1</td>
                      <td>Sint Antoniusweg 2</td>
-                     <td><button type="button" class="btn btn-block btn-info react" data-id="jos">Aanvraag</button></td>
+                     <td><button type="button" class="btn btn-block btn-info react" data-id="jos">Reserveer</button></td>
                   </tr>
                   <tr id="samantha">
                      <td>Boormachine</td>
-                      <td id="name-samantha">Samantha van Gerwen</td>
+                      <td id="name-samantha">Priscilla Janssen</td>
                      <td>0</td>
                      <td>Lorreman 5</td>
-                     <td><button type="button" class="btn btn-block btn-warning disabled" data-id="samantha">Per 13-Nov</button></td>
+                     <td><button type="button" class="btn btn-block btn-warning disabled" data-id="samantha">13-Nov</button></td>
                   </tr>
                   <tr id="sjonnie">
                      <td>Steekwagen</td>
                       <td id="name-sjonnie">'t Atrium</td>
-                     <td>2</td>
+                     <td id="minus-item-id-1">2</td>
                      <td>Paltrokmolen 8</td>
-                     <td><button type="button" class="btn btn-block btn-info react" data-id="sjonnie">Aanvraag</button></td>
+                     <td><button type="button" data-id-item="minus-item-id-1" class="btn btn-block btn-info react" data-id="sjonnie" id="minus-item">Reserveer</button></td>
                   </tr>
                   <tr id="anita">
                      <td>Dopsleutelset</td>
-                      <td id="name-anita">Anita de Boer</td>
+                      <td id="name-anita">Gerard Gerardsen</td>
                      <td>0</td>
                      <td>Roefvoort 27</td>
-                     <td><button type="button" class="btn btn-block btn-warning disabled" data-id="anita">Per 21-Nov</button></td>
+                     <td><button type="button" class="btn btn-block btn-warning disabled" data-id="anita">21-Nov</button></td>
                   </tr>
                   <tr id="truusje">
                      <td>Waterpas</td>
                       <td id="name-truusje">'t Atrium</td>
                      <td>5</td>
                      <td>Paltrokmolen 8</td>
-                     <td><button type="button" class="btn btn-block btn-info react" data-id="truusje">Aanvraag</button></td>
+                     <td><button type="button" class="btn btn-block btn-info react" data-id="truusje">Reserveer</button></td>
                   </tr>
                   </tbody>
                </table>
@@ -79,7 +79,7 @@
    <div class="row">
       <div class="col-md-10"></div>
       <div class="col-md-2">
-         <button type="button" id="request" class="btn btn-block btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Aanvraag Toevoegen</button>
+         <button type="button" id="request" class="btn btn-block btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Voorwerp toegoeven</button>
       </div>
    </div>
 </section>
@@ -103,30 +103,32 @@
         var id = $(this).attr('data-id')
         var name = $('#name-' + id).html()
         swal({
-            title: 'Reageer op ' + name,
-            html: '<div class="row"><div class="col-sm-12"><textarea id="omschrijving" class="form-control"></textarea></div></div>',
+            title: 'Voorwerp reserveren?',
             showCloseButton: true,
             showCancelButton: true,
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Verstuur reactie',
+            confirmButtonText: 'Bevestig',
+            cancelButtonText: 'Annuleren',
         }).then(function () {
             swal({
                 type: 'success',
-                title: 'Reactie verstuurd!',
+                title: 'Voorwerp gereserveerd!',
             })
         })
     })
     $( "#request" ).click(function() {
         swal({
-            title: 'Voorwerp aan magazijn toevoegen',
+            title: 'Voorwerp uitlenen',
             html:
             '<div class="row" style="margin-bottom: 10px"><div class="col-sm-12"><input type="text" id="item" class="form-control" placeholder="Voorwerp"></div></div>' +
             '<div class="row"><div class="col-sm-12"><input type="number" id="amount" class="form-control" placeholder="Aantal"></div></div>',
             showCloseButton: true,
             showCancelButton: true,
             cancelButtonColor: '#d33',
+            cancelButtonText:
+                'Annuleren',
             confirmButtonText:
-                'Voorwerp toevoegen',
+                'Bevestig',
         }).then(function() {
             swal({
                 type: 'success',
@@ -136,7 +138,16 @@
             var amount = $('#amount').val()
             var adres = 'Brandvoortsedijk 98a'
 
+<<<<<<< HEAD
             $('#services').append('<tr><td>'+ item +'</td><td id="name-mazeyar">Mazeyar Rezaei</td><td>'+ amount +'</td><td>'+ adres +'</td><td><button type="button" class="btn btn-block btn-info react" data-id="mazeyar">Aanvraag</button></td></tr>')
+=======
+            $('#services').append('<tr><td>'+ item +'</td><td id="name-mazeyar">Mazeyar Rezaei</td><td>'+ amount +'</td><td>'+ adres +'</td><td><button type="button" class="btn btn-block btn-info react" data-id="mazeyar">Reserveer</button></td></tr>')
+>>>>>>> origin/master
         })
     });
+
+    $('#minus-item').click(function (e) {
+        var item_id = $(this).attr('data-id-item')
+        $('#' + item_id).html('1')
+    })
 </script>

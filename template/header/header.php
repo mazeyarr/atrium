@@ -70,7 +70,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="profile.php" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="profile.php" class="btn btn-default btn-flat">Profiel</a>
                                     </div>
                                     <div class="pull-right">
                                         <a href="index.php" class="btn btn-default btn-flat">Uitloggen</a>
@@ -83,7 +83,7 @@
                                 <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="header">Uw huidige balans:</li>
+                                <li class="header">Huidige balans</li>
                                 <li>
                                     <!-- inner menu: contains the actual data -->
                                     <div class="slimScrollDiv" style="position: relative; width: auto; height: 50px;">
@@ -99,7 +99,7 @@
                                                 <?php } ?>
                                             </div>
                                             <div class="col-sm-3" style="margin-top: 10px;">
-                                                <a href="store.php" class="btn btn-success" style="padding-left: 5px;">Bijvullen <i class="fa fa-plus" aria-hidden="true" style="padding: 5px;"></i></a>
+                                                <a href="store.php" class="btn btn-success" style="padding-left: 5px;"><i class="fa fa-plus" aria-hidden="true" style="padding: 5px;"></i> Bijvullen</a>
                                             </div>
                                             <div class="col-sm-3">
                                             </div>
