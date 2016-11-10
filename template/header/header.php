@@ -99,7 +99,7 @@
                                                 <?php } ?>
                                             </div>
                                             <div class="col-sm-3" style="margin-top: 10px;">
-                                                <a href="/store.php" class="btn btn-success" style="padding-left: 5px;">Bijvullen <i class="fa fa-plus" aria-hidden="true" style="padding: 5px;"></i></a>
+                                                <a href="store.php" class="btn btn-success" style="padding-left: 5px;">Bijvullen <i class="fa fa-plus" aria-hidden="true" style="padding: 5px;"></i></a>
                                             </div>
                                             <div class="col-sm-3">
                                             </div>
